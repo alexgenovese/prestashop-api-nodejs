@@ -43,7 +43,7 @@ const buildQuery = (opt) => {
 };
 
 const buildRoute = (options, opt) => {
-    let route = `http://${options.url}/api/${opt['resource']}`;
+    let route = `${options.url}/api/${opt['resource']}`;
     if(opt['id']) route = `${route}/${opt['id']}`;
     return route;
 };
