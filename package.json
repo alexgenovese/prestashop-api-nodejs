@@ -1,0 +1,30 @@
+{
+  "name": "prestashop-api-nodejs",
+  "version": "1.0.0",
+  "description": "Prestashop API in NodeJS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexgenovese/prestashop-api-nodejs.git"
+  },
+  "keywords": [
+    "prestashop",
+    "node",
+    "api",
+    "webservice"
+  ],
+  "author": "Alex Genovese",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alexgenovese/prestashop-api-nodejs/issues"
+  },
+  "homepage": "https://github.com/alexgenovese/prestashop-api-nodejs#readme",
+  "dependencies": {
+    "http-build-query": "^0.7.0",
+    "nodejs-base64-converter": "^1.0.5",
+    "request": "^2.88.2"
+  }
+}
