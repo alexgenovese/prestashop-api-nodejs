@@ -2,7 +2,7 @@ const request = require('request');
 const httpBuildQuery = require('http-build-query');
 var nodeBase64 = require('nodejs-base64-converter');
 
-const params = ['filter', 'display', 'sort', 'limit', 'output_format', 'schema', 'id_shop', 'id_group_shop'];
+const params = ['filter', 'display', 'sort', 'limit', 'schema', 'id_shop', 'id_group_shop'];
 
 const req = (opt) => {
     return new Promise((resolve) => {
@@ -70,7 +70,7 @@ module.exports = function( options ) {
             },
             body: opt['output_format'] === 'JSON' ? JSON.stringify(body) : body
         });
-        return opt['output_format'] === 'JSON' ? JSON.parse(req['response']) : req['response'];
+        return JSON.parse(req['response'])
     };
     this.get = async (opt) => {
         let url = buildUrl(options, opt);
@@ -82,7 +82,7 @@ module.exports = function( options ) {
                 'Content-Type': 'application/json'
             }
         });
-        return opt['output_format'] === 'JSON' ? JSON.parse(req['response']) : req['response'];
+        return JSON.parse(req['response'])
     };
     this.head = async (opt) => {
         let url = buildUrl(options, opt);
@@ -108,7 +108,7 @@ module.exports = function( options ) {
             },
             body: opt['output_format'] === 'JSON' ? JSON.stringify(body) : body
         });
-        return opt['output_format'] === 'JSON' ? JSON.parse(req['response']) : req['response'];
+        return JSON.parse(req['response'])
     };
     this.delete = async (opt) => {
         let url = buildUrl(options, opt);
