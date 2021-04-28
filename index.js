@@ -2,7 +2,7 @@ const request = require('request');
 const httpBuildQuery = require('http-build-query');
 var nodeBase64 = require('nodejs-base64-converter');
 
-const params = ['filter', 'display', 'sort', 'limit', 'output_format', 'schema', 'id_shop', 'id_group_shop', 'ws_key'];
+const params = ['filter', 'display', 'sort', 'limit', 'output_format', 'schema', 'id_shop', 'id_group_shop'];
 
 const req = (opt) => {
     return new Promise((resolve) => {
@@ -37,7 +37,7 @@ const buildQuery = (opt) => {
         }
     }
     if(Object.entries(url_params).length > 0) {
-        query = `?${httpBuildQuery(url_params)}`;
+        query = `${httpBuildQuery(url_params)}`;
     }
     return query;
 };
@@ -51,7 +51,7 @@ const buildRoute = (options, opt) => {
 const buildUrl = (options, opt) => {
     let route = buildRoute(options, opt);
     let query = buildQuery(opt);
-    url = `${route}${query}`;
+    url = `${route}?ws_key=${options.key}&output_format=JSON&${query}`;
     return url;
 };
 
