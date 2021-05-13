@@ -1,5 +1,5 @@
 {
-  "name": "prestashop-api-nodejs",
+  "name": "@alexgenovese/prestashop-api-nodejs",
   "version": "1.0.3",
   "description": "Prestashop API in NodeJS",
   "main": "index.js",
@@ -26,5 +26,6 @@
     "http-build-query": "^0.7.0",
     "nodejs-base64-converter": "^1.0.5",
     "request": "^2.88.2"
-  }
+  },
+  "publishConfig": { "registry": "https://npm.pkg.github.com/alexgenovese" }
 }
