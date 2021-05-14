@@ -33,7 +33,6 @@ The code sample below shows the usage of the library:
     var client = new Prestashop(options);
     await client.get({
           resource: 'customers',
-          output_format: 'JSON',
-          ws_key: '<Prestashop Token>'
+          output_format: 'JSON'
         })
 ```
