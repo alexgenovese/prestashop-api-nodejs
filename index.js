@@ -98,7 +98,7 @@ module.exports = function( options ) {
     };
     this.put = async (opt) => {
         let url = buildUrl(options, opt);
-        let xml = opt['body'];
+        let body = opt['body'];
         let req = await exec({
             url: url,
             method: 'PUT',
