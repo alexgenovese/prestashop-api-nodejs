@@ -1,6 +1,6 @@
 {
   "name": "@alexgenovese/prestashop-api-nodejs",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Prestashop API in NodeJS",
   "main": "index.js",
   "scripts": {
