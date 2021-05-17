@@ -8,8 +8,6 @@
 
 This Node.js library enables JavaScript applications to communicate with Prestashop 1.7.x sites using their REST API.
 
-**NOTE: the module is made up by base functions!**
-
 
 ## Installation
 
