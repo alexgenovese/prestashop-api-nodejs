@@ -14,7 +14,7 @@ This Node.js library enables JavaScript applications to communicate with Prestas
 The library can be installed using the Npm package manager:
 
 ```
-    npm install --save github:alexgenovese/prestashop-api-nodejs
+npm i prestashop-api-nodejs --save
 ```
 
 ## Usage
@@ -22,15 +22,16 @@ The library can be installed using the Npm package manager:
 The code sample below shows the usage of the library:
 
 ```javascript
-    var Prestashop = require('prestashop-api-nodejs');
+var Prestashop = require('prestashop-api-nodejs');
 
-    var options = {
-          url: 'prestashop.local',
-          key: '<Prestashop Token>'
-    };
-    var client = new Prestashop(options);
+var options = {
+    url: 'prestashop.local',
+    key: '<Prestashop Token>'
+};
+
+var client = new Prestashop(options);
     await client.get({
           resource: 'customers',
           output_format: 'JSON'
-        })
+    })
 ```
