@@ -2,7 +2,7 @@ const request = require('request');
 const httpBuildQuery = require('http-build-query');
 var nodeBase64 = require('nodejs-base64-converter');
 
-const params = ['filter', 'display', 'sort', 'limit', 'schema', 'id_shop', 'id_group_shop'];
+const params = ['filter', 'display', 'sort', 'limit', 'schema', 'id_shop', 'id_group_shop', 'query', 'language'];
 
 const req = (opt) => {
     return new Promise((resolve) => {
