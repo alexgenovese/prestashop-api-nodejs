@@ -51,7 +51,7 @@ const buildRoute = (options, opt) => {
 const buildUrl = (options, opt) => {
     let route = buildRoute(options, opt);
     let query = buildQuery(opt);
-    url = `${route}?ws_key=${options.key}&output_format=JSON&${query}`;
+    let url = `${route}?ws_key=${options.key}&output_format=JSON&${query}`;
     return url;
 };
 
